@@ -8,8 +8,7 @@ A responsive single-page portfolio hosted on AWS S3 and served via CloudFront wi
 
 ## Live URL
 
-> Replace with your CloudFront URL after deployment
-> `https://xxxxxxxx.cloudfront.net`
+> `https://de2iprp8jlj33.cloudfront.net`
 
 ---
 
@@ -33,10 +32,10 @@ A responsive single-page portfolio hosted on AWS S3 and served via CloudFront wi
 
 ### 2. Create S3 Bucket
 ```bash
-aws s3 mb s3://rushikesh-portfolio --region us-east-1
+aws s3 mb s3://rushikesh-gade-portfolio --region ap-south-1
 ```
-- Bucket name: `rushikesh-portfolio`
-- Region: `us-east-1`
+- Bucket name: `rushikesh-gade-portfolio`
+- Region: `ap-south-1` (Mumbai)
 - Enabled Static website hosting → Index document: `index.html`
 
 ### 3. Disable Block Public Access
@@ -52,7 +51,7 @@ aws s3 mb s3://rushikesh-portfolio --region us-east-1
       "Effect": "Allow",
       "Principal": "*",
       "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::rushikesh-portfolio/*"
+      "Resource": "arn:aws:s3:::rushikesh-gade-portfolio/*"
     }
   ]
 }
@@ -60,12 +59,12 @@ aws s3 mb s3://rushikesh-portfolio --region us-east-1
 
 ### 5. Upload Files to S3
 ```bash
-aws s3 sync . s3://rushikesh-portfolio --exclude ".git/*" --exclude "README.md"
+aws s3 sync . s3://rushikesh-gade-portfolio --exclude ".git/*" --exclude "*.json" --region ap-south-1
 ```
 
 ### 6. Test S3 Endpoint
 ```
-http://rushikesh-portfolio.s3-website-us-east-1.amazonaws.com
+http://rushikesh-gade-portfolio.s3-website.ap-south-1.amazonaws.com
 ```
 
 ### 7. Create CloudFront Distribution
