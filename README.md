@@ -93,8 +93,15 @@ http://rushikesh-gade-portfolio.s3-website.ap-south-1.amazonaws.com
 ---
 
 ## Screenshots
-> Add screenshots of:
-> - S3 bucket with static hosting enabled
-> - Bucket policy applied
-> - CloudFront distribution (Enabled status)
-> - Live site in browser (HTTPS)
+
+### S3 Bucket Static Hosting Configuration
+![S3 Bucket Static Hosting](assets/S3%20Bucket%20Static%20Hosting%20Configuration.png)
+
+### S3 Bucket Policy
+![S3 Bucket Policy](assets/S3%20Bucket%20Policy.png)
+
+### CloudFront Distribution (Enabled Status)
+![CloudFront Distribution](assets/CloudFront%20Distribution%20(Enabled%20Status).png)
+
+### Live Site in Browser (HTTPS)
+![Live Site HTTPS](assets/Live%20site%20in%20browser%20(HTTPS).png)
